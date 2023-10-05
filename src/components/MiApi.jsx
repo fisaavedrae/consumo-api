@@ -1,19 +1,23 @@
 import { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 
-const MiApi = ({ text }) => {
-    const [paises, setPaises] = useState([]);
+const MiApi = ({ setDatos, datos, setDatosdatosBack }) => {
+
+
 
     useEffect(() => {
         consultarApi();
     }, []);
+
+
     const consultarApi = async () => {
         try {
             const url = "https://restcountries.com/v3.1/all";
             const response = await fetch(url);
             const data = await response.json();
-            setPaises(data);
-            console.log(paises)
+
+            setDatos(ordenar(data));
+            setDatosdatosBack(ordenar(data));
         }
 
         catch (error) {
@@ -22,9 +26,22 @@ const MiApi = ({ text }) => {
         }
     };
 
+    const ordenar = (data) => {
+        const resultadoBusqueda = [...data];
+        resultadoBusqueda.sort((a, b) => {
+            if (a.translations.spa.common < b.translations.spa.common) {
+                return -1;
+            }
+            if (a.translations.spa.common > b.translations.spa.common) {
+                return 1;
+            }
+            return 0;
+        });
+        return resultadoBusqueda;
+    }
     return (
         <>
-            {paises.map((pais) => (
+            {datos.map((pais) => (
                 <Card >
                     <Card.Img variant="top" src={pais.flags.png} />
                     <Card.Body>
@@ -35,7 +52,7 @@ const MiApi = ({ text }) => {
                             <p><b>Capital:</b>{pais.capital}</p>
                         </Card.Text>
                     </Card.Body>
-                </Card>
+                </Card >
             ))}
         </>
     )
