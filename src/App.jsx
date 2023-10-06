@@ -1,7 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Container from 'react-bootstrap/Container';
-import Dropdown from 'react-bootstrap/Dropdown';
-import Card from 'react-bootstrap/Card';
 import './App.css'
 import Header from './components/Header';
 import Buscador from './components/Buscador';
@@ -13,14 +11,9 @@ function App() {
   const [datosBack, setDatosdatosBack] = useState([])
   const [datosOrdenados, setDatosOrdenados] = useState("asc")
 
-
-
-
   const enviarFormularioBusqueda = (busqueda, paises) => {
     setDatos(datosBack)
-
     let textoBusqueda = ""
-
     const resultadoBusqueda = datosBack.filter(function (pais) {
       textoBusqueda = pais.translations.spa.common.toUpperCase()
       if (textoBusqueda.includes(busqueda.toUpperCase())) {
