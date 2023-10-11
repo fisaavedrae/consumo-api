@@ -47,9 +47,9 @@ const MiApi = ({ setDatos, datos, setDatosdatosBack }) => {
                     <Card.Body>
                         <Card.Title>{pais.translations.spa.common}</Card.Title>
                         <Card.Text>
-                            <p><b>Población:</b>{pais.population}</p>
-                            <p><b>Región:</b>{pais.region}</p>
-                            <p><b>Capital:</b>{pais.capital}</p>
+                            <p><b>Población: </b>{pais.population}</p>
+                            <p><b>Región: </b>{pais.region}</p>
+                            <p><b>Capital: </b>{pais.capital}</p>
                         </Card.Text>
                     </Card.Body>
                 </Card >
