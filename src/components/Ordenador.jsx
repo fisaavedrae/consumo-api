@@ -1,12 +1,10 @@
 import Dropdown from 'react-bootstrap/Dropdown';
-import React, { useState } from 'react';
 
 const Ordenador = ({ onSubmit, paises }) => {
     const handleClick = (clave) => {
         onSubmit(clave, paises)
     }
     return (
-
         <Dropdown >
             <Dropdown.Toggle variant="light" id="dropdown-ordenador">
                 Ordenar por...
@@ -16,7 +14,6 @@ const Ordenador = ({ onSubmit, paises }) => {
                 <Dropdown.Item eventKey="Region" onClick={() => handleClick("desc")}>Nombre Z-A</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
-
     )
 }
 

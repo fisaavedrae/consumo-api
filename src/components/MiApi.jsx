@@ -1,25 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 
 const MiApi = ({ setDatos, datos, setDatosdatosBack }) => {
-
-
-
     useEffect(() => {
         consultarApi();
     }, []);
-
 
     const consultarApi = async () => {
         try {
             const url = "https://restcountries.com/v3.1/all";
             const response = await fetch(url);
             const data = await response.json();
-
             setDatos(ordenar(data));
             setDatosdatosBack(ordenar(data));
         }
-
         catch (error) {
             console.error(error);
             throw error;
@@ -57,6 +51,5 @@ const MiApi = ({ setDatos, datos, setDatosdatosBack }) => {
         </>
     )
 }
-
 
 export default MiApi

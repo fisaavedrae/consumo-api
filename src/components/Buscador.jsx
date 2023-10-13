@@ -1,7 +1,5 @@
-
 import React from 'react'
 import { useState } from 'react';
-
 
 const Buscador = ({ onSubmit, paises }) => {
     console.log("render buscador")
@@ -10,8 +8,6 @@ const Buscador = ({ onSubmit, paises }) => {
         onSubmit(buscador, paises)
         console.log("render handleChange")
     }
-
-
     return (
         <>
             <input type="text" placeholder="Buscar un pais" onKeyUp={handleChange} value={buscador} onChange={(e) => setBuscador(e.target.value)} />
