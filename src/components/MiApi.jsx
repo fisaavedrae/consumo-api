@@ -37,11 +37,11 @@ const MiApi = ({ setDatos, datos, setDatosdatosBack }) => {
         <>
             {datos.map((pais) => (
                 <Card key={pais.translations.spa.common}>
-                    <Card.Img variant="top" src={pais.flags.png} />
+                    <Card.Img variant="top" src={pais.flags.png} alt={pais.translations.spa.common} />
                     <Card.Body>
                         <Card.Title>{pais.translations.spa.common}</Card.Title>
                         <Card.Text>
-                            <p><b>Población: </b>{pais.population}</p>
+                            <p><b>Población: </b>{Intl.NumberFormat('es-CL').format(pais.population)}</p>
                             <p><b>Región: </b>{pais.region}</p>
                             <p><b>Capital: </b>{pais.capital}</p>
                         </Card.Text>

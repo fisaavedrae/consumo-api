@@ -17,5 +17,4 @@ const Ordenador = ({ onSubmit, paises }) => {
     )
 }
 
-
 export default Ordenador

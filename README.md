@@ -4,6 +4,6 @@ La prueba consiste en construir una aplicaci√≥n que consuma una API a tu elecci√
 
 - [repo](hhttps://github.com/fisaavedrae/consumo-api) 
 - [live app](https://consumo-api-fse.vercel.app/) 
-- [video](https://github.com/vitejs/vite-plugin-react-swc) 
+- [video](https://vimeo.com/874458245) 
 
 - [frontendmentor](https://www.frontendmentor.io/solutions/solution-with-react-and-bootstrap-udUWz5E64x) 

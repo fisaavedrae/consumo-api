@@ -36,7 +36,6 @@ function App() {
     setDatos(resultadoOrden);
   }
   return (
-
     <Container id='main'>
       <Container id='cabecera' fluid><Header titulo='Paises' /></Container>
       <Container fluid id='buscador'><Buscador onSubmit={enviarFormularioBusqueda} paises={datos} /></Container>
@@ -45,7 +44,6 @@ function App() {
         <MiApi setDatos={setDatos} datos={datos} setDatosdatosBack={setDatosdatosBack} />
       </Container>
     </Container>
-
   )
 }
 
